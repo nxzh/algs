@@ -1,0 +1,4 @@
+a. if (a > b) then c = 0; // then is not a keyword in java
+b. if a > b { c = 0; } // condition in if statement need to be in ()
+c. if (a > b) c = 0; // correct.
+d. if (a > b) c = 0 else b = 0; // a semicolon need to be added after c = 0

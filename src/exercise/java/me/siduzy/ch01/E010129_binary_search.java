@@ -1,7 +1,7 @@
 package me.siduzy.ch01;
 
 
-public class E010129 {
+public class E010129_binary_search {
 
     public static int rankSmaller(int k, int[] a) {
         int lo = 0, hi = a.length - 1;

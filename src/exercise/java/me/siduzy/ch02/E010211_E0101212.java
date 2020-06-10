@@ -1,5 +1,7 @@
 package me.siduzy.ch02;
 
+import java.time.LocalDate;
+
 public class E010211_E0101212 {
 
     public static class SmartDate {
@@ -95,7 +97,9 @@ public class E010211_E0101212 {
     }
 
     public static void main(String[] args) {
-        SmartDate date = new SmartDate(6, 9, 2020);
+        SmartDate date = new SmartDate(1, 1, 2099);
+        LocalDate ld = LocalDate.of(2099, 1, 1);
+        System.out.println(ld.getDayOfWeek());
         System.out.println(date.dayOfTheWeek());
     }
 }

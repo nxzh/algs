@@ -94,7 +94,7 @@ public class ArrayQueue<ITEM> implements Queue<ITEM> {
 
         @Override
         public boolean hasNext() {
-            return head == tail;
+            return head != tail;
         }
 
         @Override

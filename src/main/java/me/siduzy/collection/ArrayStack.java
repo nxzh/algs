@@ -40,6 +40,11 @@ public class ArrayStack<ITEM> implements Stack<ITEM> {
     }
 
     @Override
+    public ITEM peek() {
+        return storage[size - 1];
+    }
+
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }

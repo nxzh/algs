@@ -39,6 +39,11 @@ public class LinkedStack<ITEM> implements Stack<ITEM> {
     }
 
     @Override
+    public ITEM peek() {
+        return head.data;
+    }
+
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }

@@ -41,6 +41,9 @@ public class ArrayStack<ITEM> implements Stack<ITEM> {
 
     @Override
     public ITEM peek() {
+        if (isEmpty()) {
+            return null;
+        }
         return storage[size - 1];
     }
 
@@ -61,9 +64,7 @@ public class ArrayStack<ITEM> implements Stack<ITEM> {
 
     private void resize(int newSize) {
         ITEM[] newStorage = (ITEM[]) new Object[newSize];
-        for (int i = 0; i < size; ++i) {
-            newStorage[i] = storage[i];
-        }
+        if (size >= 0) System.arraycopy(storage, 0, newStorage, 0, size);
         storage = newStorage;
     }
 

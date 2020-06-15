@@ -40,6 +40,9 @@ public class LinkedStack<ITEM> implements Stack<ITEM> {
 
     @Override
     public ITEM peek() {
+        if (head == null) {
+            return null;
+        }
         return head.data;
     }
 

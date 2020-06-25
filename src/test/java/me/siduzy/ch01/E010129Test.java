@@ -1,5 +1,6 @@
 package me.siduzy.ch01;
 
+import me.siduzy.ch01.sec01.E010129_binary_search;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

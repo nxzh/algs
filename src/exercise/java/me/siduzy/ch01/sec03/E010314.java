@@ -37,7 +37,7 @@ public class E010314 {
             if (size() == 0) {
                 return null;
             }
-            if (size() == storage.length / 4) {
+            if (size() > 0 && size() == storage.length / 4) {
                 resize(storage.length / 2);
             }
             Item ret = storage[begin];

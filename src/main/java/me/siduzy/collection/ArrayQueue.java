@@ -39,7 +39,7 @@ public class ArrayQueue<ITEM> implements Queue<ITEM> {
         if (size() == 0) {
             throw new NoSuchElementException();
         }
-        if (size() == storage.length / 4) {
+        if (size() > 0 && size() == storage.length / 4) {
             resize(storage.length / 2);
         }
         ITEM ret = storage[begin];

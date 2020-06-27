@@ -28,6 +28,7 @@ public class E010321 {
         }
         return node[0];
     }
+    
     public static void main(String[] args) {
         StdOut.println(find(createList(4), "3"));
         StdOut.println(find(createList(1), "2"));

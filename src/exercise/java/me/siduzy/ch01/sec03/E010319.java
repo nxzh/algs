@@ -2,55 +2,32 @@ package me.siduzy.ch01.sec03;
 
 import edu.princeton.cs.algs4.StdOut;
 
+import static me.siduzy.ch01.sec03.Utils.createList;
+import static me.siduzy.ch01.sec03.Utils.length;
+
 public class E010319 {
 
-    static class Node {
-        Node next;
-        int data;
-
-        public void removeTail() {
-            Node p = this;
-            if (p.next == null) {
-                return;
-            }
-            while (p.next.next != null) {
-                p = p.next;
-            }
-            p.next = null;
+    public static <ITEM> void removeTail(Node<ITEM> head) {
+        Node p = head;
+        if (p.next == null) {
+            return;
         }
-
-        public int length() {
-            Node p = this;
-            int len = 0;
-            while (p != null) {
-                p = p.next;
-                ++len;
-            }
-            return len;
+        while (p.next.next != null) {
+            p = p.next;
         }
+        p.next = null;
     }
 
-    public static Node createList(int len) {
-        Node[] node = new Node[len];
-        for (int i = 0; i < len; i++) {
-            node[i] = new Node();
-            node[i].data = i;
-        }
-        for (int i = 1; i < len; i++) {
-            node[i - 1].next = node[i];
-        }
-        return node[0];
-    }
 
     public static void main(String[] args) {
         Node n2 = createList(2);
-        n2.removeTail();
-        StdOut.println(n2.length());
+        removeTail(n2);
+        StdOut.println(length(n2));
         Node n3 = createList(3);
-        n3.removeTail();
-        StdOut.println(n3.length());
+        removeTail(n3);
+        StdOut.println(length(n3));
         Node n4 = createList(4);
-        n4.removeTail();
-        StdOut.println(n4.length());
+        removeTail(n4);
+        StdOut.println(length(n4));
     }
 }

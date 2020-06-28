@@ -16,6 +16,7 @@ public class E010321 {
         }
         return false;
     }
+    
     public static void main(String[] args) {
         StdOut.println(find(createStringList(4), "3"));
         StdOut.println(find(createStringList(1), "2"));

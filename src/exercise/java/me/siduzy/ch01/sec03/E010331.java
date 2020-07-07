@@ -1,10 +1,12 @@
 package me.siduzy.ch01.sec03;
 
+import edu.princeton.cs.algs4.In;
+
 public class E010331 {
-    static class DoubleNode<Item> {
-        DoubleNode<Item> prev;
-        DoubleNode<Item> next;
-        Item data;
+    public static class DoubleNode<Item> {
+        public DoubleNode<Item> prev;
+        public DoubleNode<Item> next;
+        public Item data;
     }
 
     public static <Item> DoubleNode<Item> insertBeforeHead(DoubleNode<Item> head, Item data) {
@@ -47,9 +49,8 @@ public class E010331 {
         if (head == null) {
             return null;
         }
-        DoubleNode<Item> oldHead = head;
-        DoubleNode<Item> newHead = oldHead.next;
-        oldHead.next = null;
+        DoubleNode<Item> newHead = head.next;
+        head.next = null;
         if (newHead != null) {
             newHead.prev = null;
         }
@@ -99,9 +100,7 @@ public class E010331 {
             node.prev = prevTarget;
         }
         node.next = targetNode;
-        if (targetNode != null) {
-            targetNode.prev = node;
-        }
+        targetNode.prev = node;
         return dummy.next;
     }
 
@@ -160,34 +159,4 @@ public class E010331 {
         toDel.prev = toDel.next = null;
         return head;
     }
-
-    public static DoubleNode<Integer> createList(int size) {
-        DoubleNode<Integer>[] ary = new DoubleNode[size];
-        for (int i = 0; i < ary.length; i++) {
-            ary[i] = new DoubleNode<>();
-        }
-        for (int i = 0; i < ary.length; i++) {
-            ary[i].data = i;
-            ary[i].prev = i == 0 ? null : ary[i - 1];
-            ary[i].next = i == ary.length - 1 ? null : ary[i + 1];
-        }
-        return ary[0];
-    }
-
-    public static void print(DoubleNode<?> head) {
-        StringBuilder builder = new StringBuilder();
-        while (head != null) {
-            builder.append(head.data).append("->");
-            head = head.next;
-        }
-        builder.append("null");
-        System.out.println(builder.toString());
-    }
-
-    public static void main(String[] args) {
-        DoubleNode<Integer> list = createList(1);
-        DoubleNode<Integer> result = insertAfter(list, 0, 10);
-        print(result);
-    }
-
 }

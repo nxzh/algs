@@ -15,14 +15,11 @@ public class E010410 {
             } else if (ary[mid] < k) {
                 lo = mid + 1;
             } else {
-                if (mid == lastFind) {
-                    return lastFind;
-                } else {
-                    lastFind = hi = mid;
-                }
+                    lastFind = mid;
+                    hi = mid - 1;
             }
         }
-        return -1;
+        return lastFind;
     }
 
     public static void main(String[] args) {

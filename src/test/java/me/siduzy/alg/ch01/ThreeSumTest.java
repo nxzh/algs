@@ -1,5 +1,6 @@
 package me.siduzy.alg.ch01;
 
+import me.siduzy.ThreeSum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

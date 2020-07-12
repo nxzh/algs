@@ -1,4 +1,4 @@
-package me.siduzy.alg.ch01;
+package me.siduzy;
 
 import me.siduzy.Search;
 

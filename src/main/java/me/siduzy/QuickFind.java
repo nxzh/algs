@@ -5,9 +5,11 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class QuickFind {
     private int[] id;
+    private int count;
 
     public QuickFind(int n) {
         id = new int[n];
+        count = n;
         for (int i = 0; i < n; i++) {
             id[i] = i;
         }
@@ -24,11 +26,18 @@ public class QuickFind {
     public void union(int p, int q) {
         int pId = find(p);
         int qId = find(q);
-        for (int i = 0; i < id.length; ++i) {
-            if (id[i] == pId) {
-                id[i] = qId;
+        if (qId != pId) {
+            for (int i = 0; i < id.length; ++i) {
+                if (id[i] == pId) {
+                    id[i] = qId;
+                }
             }
+            count--;
         }
+    }
+
+    public int count() {
+        return count;
     }
 
     public static void main(String[] args) {
@@ -41,6 +50,7 @@ public class QuickFind {
                 continue;
             }
             qf.union(p, q);
+            StdOut.println(qf.count());
             StdOut.println(p + " " + q);
         }
     }

@@ -5,16 +5,22 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class QuickUnion {
     private int[] id;
+    private int count;
 
     public QuickUnion(int n) {
         id = new int[n];
+        count = n;
         for (int i = 0; i < id.length; ++i) {
             id[i] = i;
         }
     }
 
+    public int count() {
+        return count;
+    }
+
     public boolean connected(int p, int q) {
-        return false;
+        return find(p) == find(q);
     }
 
     public int find(int p) {
@@ -28,7 +34,8 @@ public class QuickUnion {
         int rootP = find(p);
         int rootQ = find(q);
         if (rootP != rootQ) {
-            id[rootP] = id[rootQ];
+            id[rootP] = rootQ;
+            count--;
         }
     }
 
@@ -44,6 +51,7 @@ public class QuickUnion {
                 continue;
             }
             qf.union(p, q);
+            StdOut.println(qf.count());
             StdOut.println(p + " " + q);
         }
     }

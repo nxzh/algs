@@ -13,10 +13,8 @@ public class WeightedQuickUF {
         id = new int[n];
         sz = new int[n];
         count = n;
-        for (int i = 0; i < id.length; i++) {
+        for (int i = 0; i < n; i++) {
             id[i] = i;
-        }
-        for (int i = 0; i < sz.length; i++) {
             sz[i] = 1;
         }
     }
@@ -45,9 +43,14 @@ public class WeightedQuickUF {
     }
 
     public int find(int p) {
-        while (p != id[p]) {
-            p = id[p];
+        int root = p;
+        while (root != id[root]) {
+            root = id[root];
         }
+        while (p != root) { {
+            p = id[p];
+            id[p] = root;
+        }}
         return p;
     }
 

@@ -47,10 +47,11 @@ public class WeightedQuickUF {
         while (root != id[root]) {
             root = id[root];
         }
-        while (p != root) { {
+        while (p != root) {
+            int oldP = p;
             p = id[p];
-            id[p] = root;
-        }}
+            id[oldP] = root;
+        }
         return p;
     }
 

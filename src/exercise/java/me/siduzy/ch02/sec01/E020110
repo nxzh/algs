@@ -1,0 +1,4 @@
+The purpose of Shell sort is to firstly make array in h-sorted.
+The bigger h sorted array will be as the input for the next smaller h sorting.
+Selection sort performance is not depending on the input. But insertion sort does.
+The comparison will be less comparing with Selection sort.

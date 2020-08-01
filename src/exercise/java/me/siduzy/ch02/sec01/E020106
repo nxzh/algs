@@ -1,0 +1,4 @@
+Insertion sort.
+
+Selection sort will use (N-1)*N/2 comparisons plus N exchanges.
+Insertion sort will use N-1 comparisons only.

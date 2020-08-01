@@ -1,0 +1,57 @@
+h = 13
+E A S Y S H E L L S O R T Q U E S T I O N
+- - - - - - - - - - - - - - - - - - - - -
+E A S Y S H E L L S O R T Q U, E S T I O N
+E A S Y S H E L L S O R T Q U, E S T I O N
+E A S Y S H E L L S O R T Q U, E S T I O N
+E A S I S H E L L S O R T Q U, E S T Y O N
+E A S I O H E L L S O R T Q U, E S T Y S N
+
+h = 4
+E A S I, O H E L, L S O R, T Q U E, S T Y S, N
+- - - - - - - - - - - - - - - - - - - - -
+E A S I, O H E L, L S O R, T Q U E, S T Y S, N
+E A S I, O H E L, L S O R, T Q U E, S T Y S, N
+E A E I, O H S L, L S O R, T Q U E, S T Y S, N
+E A E I, O H S L, L S O R, T Q U E, S T Y S, N
+
+E A E I, L H S L, O S O R, T Q U E, S T Y S, N
+E A E I, L H S L, O S O R, T Q U E, S T Y S, N
+E A E I, L H O L, O S S R, T Q U E, S T Y S, N
+E A E I, L H O L, O S S R, T Q U E, S T Y S, N
+
+E A E I, L H O L, O S S R, T Q U E, S T Y S, N
+E A E I, L H O L, O Q S R, T S U E, S T Y S, N
+E A E I, L H O L, O Q S R, T S U E, S T Y S, N
+E A E E, L H O I, O Q S L, T S U R, S T Y S, N
+
+E A E E, L H O I, O Q S L, S S U R, T T Y S, N
+E A E E, L H O I, O Q S L, S S U R, T T Y S, N
+E A E E, L H O I, O Q S L, S S U R, T T Y S, N
+E A E E, L H O I, O Q S L, S S U R, T T Y S, N
+
+E A E E, L H O I, N Q S L, O S U R, S T Y S, T
+
+h = 1
+    E A E E L H O I N Q S L O S U R S T Y S T
+    - - - - - - - - - - - - - - - - - - - - -
+A:  A E E E L H O I N Q S L O S U R S T Y S T
+E:  A E E E L H O I N Q S L O S U R S T Y S T
+E:  A E E E L H O I N Q S L O S U R S T Y S T
+L:  A E E E L H O I N Q S L O S U R S T Y S T
+H:  A E E E H L O I N Q S L O S U R S T Y S T
+O:  A E E E H L O I N Q S L O S U R S T Y S T
+I:  A E E E H I O L N Q S L O S U R S T Y S T
+N:  A E E E H I O L N Q S L O S U R S T Y S T
+Q:  A E E E H I O L N Q S L O S U R S T Y S T
+S:  A E E E H I O L N Q S L O S U R S T Y S T
+L:  A E E E H I O L L N Q S O S U R S T Y S T
+O:  A E E E H I O L L N O Q S S U R S T Y S T
+S:  A E E E H I O L L N O Q S S U R S T Y S T
+U:  A E E E H I O L L N O Q S S U R S T Y S T
+R:  A E E E H I O L L N O Q R S S U S T Y S T
+S:  A E E E H I O L L N O Q R S S S U T Y S T
+T:  A E E E H I O L L N O Q R S S S T U Y S T
+Y:  A E E E H I O L L N O Q R S S S T U Y S T
+S:  A E E E H I O L L N O Q R S S S S T U Y T
+T:  A E E E H I O L L N O Q R S S S S T T U Y

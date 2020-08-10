@@ -28,7 +28,7 @@ public class Sorter {
                     min = j;
                 }
             }
-            exch(a, i, min);
+            exch(a, i, min); // must happen
         }
     }
 
